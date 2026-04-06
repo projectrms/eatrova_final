@@ -19,11 +19,25 @@ from flask import send_file
 import io
 import stripe
 import os
-STRIPE_API_KEY = os.getenv("STRIPE_API_KEY")
-
+# STRIPE_API_KEY = os.getenv("STRIPE_API_KEY")
+# stripe.api_key = STRIPE_API_KEY
+# print("STRIPE KEY:", STRIPE_API_KEY)
 UPLOAD_FOLDER = "static/menu"
 ALLOWED_EXTENSIONS = {"png", "jpg", "jpeg", "webp"}
 
+from dotenv import load_dotenv
+import os
+
+env_path = os.path.join(os.path.dirname(__file__), ".env")
+print("ENV PATH:", env_path)  # debug
+
+load_dotenv(dotenv_path=env_path)
+
+STRIPE_API_KEY = os.getenv("STRIPE_API_KEY")
+print("STRIPE KEY:", STRIPE_API_KEY)
+
+import stripe
+stripe.api_key = STRIPE_API_KEY
 # -------------------------
 # Config
 # -------------------------
