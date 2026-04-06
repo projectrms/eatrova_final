@@ -346,7 +346,7 @@ export default function ManagerDashboard({ onLogout }) {
 
   <div className="toolbar-break"></div>
 
-  {["All", "Starters", "Main Course", "Deserts","Beverages","Soup","Breads","Fast Food"].map((c) => (
+  {["all", "starters", "main", "desserts","beverages","soup","breads","fast-food"].map((c) => (
     <button
       key={c}
       className={`category-btn ${selectedCategory === c ? "active" : ""}`}
@@ -436,10 +436,10 @@ export default function ManagerDashboard({ onLogout }) {
               <option value="starters">Starters</option>
               <option value="main">Main Course</option>
               <option value="desserts">Deserts</option>
-              <option value="drinks">Beverages</option>
-              <option value="drinks">Soup</option>
-              <option value="drinks">Breads</option>
-              <option value="drinks">Fast Food</option>
+              <option value="beverages">Beverages</option>
+              <option value="soup">Soup</option>
+              <option value="breads">Breads</option>
+              <option value="fast-food">Fast Food</option>
             </select>
 
             <button className="action-btn view full">
