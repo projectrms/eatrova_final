@@ -161,7 +161,7 @@ export default function OwnerReport() {
       </section>
 
       {/* Order History */}
-      <section className="report-section">
+      {/* <section className="report-section">
         <h2>Order History</h2>
         <table className="report-table">
           <thead>
@@ -199,7 +199,7 @@ export default function OwnerReport() {
             )}
           </tbody>
         </table>
-      </section>
+      </section> */}
 
     </div>
   );
