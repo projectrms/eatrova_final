@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from "react";
 import "../styles/HomePage.css";
 import Navbar from "../components/Navbar";
 import { motion, useScroll, useTransform } from "framer-motion";
-
+import { useNavigate } from "react-router-dom";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Lenis from "lenis";
@@ -15,7 +15,7 @@ export default function HomePage() {
 
   const heroScale = useTransform(scrollYProgress, [0, 0.4], [1, 1.12]);
   const heroOpacity = useTransform(scrollYProgress, [0, 0.4], [1, 0]);
-
+ const navigate = useNavigate();
   
 
 useEffect(() => {
@@ -124,7 +124,7 @@ useEffect(() => {
       </button>
       <button
         className="hero-btn order-btn"
-        onClick={() => alert("Redirect to order page")}
+        onClick={() => navigate("/menu")}
       >
         Order Now
       </button>

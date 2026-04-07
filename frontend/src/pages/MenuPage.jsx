@@ -17,7 +17,9 @@ import {
   Sandwich,
   Martini,
   Coffee,
+  Croissant,
   IceCream,
+  Hamburger,
   Plus
 } from "lucide-react";
 
@@ -38,11 +40,14 @@ export default function MenuPage() {
 
   const categoryIcons = {
     all: <LayoutGrid size={20} />,
-    pizza: <Pizza size={20} />,
-    starter: <Soup size={20} />,
+    starters: <Pizza size={20} />,
+    soup: <Soup size={20} />,
     main: <Utensils size={20} />,
     drinks: <Martini size={20} />,
-    dessert: <IceCream size={20} />
+    'fast-food': <Hamburger size={20} />,
+    breads: <Sandwich size={20} />,
+    beverages: <Croissant size={20} />,
+    desserts: <IceCream size={20} />
   };
 
   const getCategoryIcon = (cat) => {
