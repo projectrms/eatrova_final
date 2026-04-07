@@ -59,9 +59,9 @@ export default function OwnerNavbar({
 >
 Generate Report
 </button> */}
-          <button className="pill export" onClick={exportPDF}>
-Export PDF
-</button> 
+         {/* <button className="pill export" onClick={exportPDF}>
+            Export PDF
+            </button> */}
         <button className="pill export" onClick={exportExcel}>
         Report
         </button>
